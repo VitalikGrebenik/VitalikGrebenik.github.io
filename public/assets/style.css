@@ -1,0 +1,25 @@
+
+
+div{
+	color: white;
+}
+
+
+.shopIcon{
+	position: absolute;
+	bottom: 3px;
+	right: 5px;
+	border-radius: 50%;
+	width: 22px;
+	height: 22px;
+	background: red;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card__text{
+	gap: 10px;
+	color: black;
+	font-size: 25px;
+}
