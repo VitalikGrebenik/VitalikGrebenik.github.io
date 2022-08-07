@@ -18,19 +18,19 @@ const CardItems = ({id, quantity}:CardItemsProps) => {
 
   return (
 	<Stack direction='horizontal' gap={2} className='d-flex align-items-center'>
-		<img src={item.image} alt="img" style={{width: '150px', height: '150px', objectFit: 'cover'}}/>
+		<img src={item.image} alt="img" style={{width: '120px', objectFit: 'cover'}}/>
 		<div className='me-auto card__text'>
-			<div className='card__text'>
-				{item.name}{quantity>1&&<span className='text-muted' style={{fontSize: '20px'}}>x{quantity}</span>}
+			<div className='card__text' style={{fontSize: '18px'}}>
+				{item.name}{quantity>1&&<span className='text-muted' style={{fontSize: '20px',padding:'0 10px'}}>x{quantity}</span>}
 			</div>
 			<div className='text-muted' style={{fontSize: '25px'}}>
-				${item.price}
+				Цена: {item.price}
+			</div>
+			<div className='card__text' style={{fontSize: '15px'}}>
+				Oбщая цена: {item.price*quantity}
 			</div>
 		</div>
-		<div className='card__text'>
-			{item.price*quantity}
-		</div>
-		<Button variant='outline-danger' size='sm' onClick={()=>removeCart(item.id)}>&times;</Button>
+		<Button variant='outline-danger' size='lg' onClick={()=>removeCart(item.id)}>&times;</Button>
 	</Stack>
   )
 }

@@ -24,10 +24,10 @@ const StoreItems = ({id, name, price, image}: StoreItemsProps) => {
 		/>
 		<Card.Body className='d-flex flex-column'>
 			<Card.Title className='d-flex  align-items-baseline mb-2'>
-				<span style={{color:'black', fontSize: '20px'}}>{name}</span>
+				<span style={{color:'black', fontSize: '16px'}}>{name}</span>
 			</Card.Title>
 			<Card.Body className='d-flex justify-content-center align-items-baseline'>
-				<span className='ms-2 text-muted' style={{color:'black', fontSize: '20px'}}>${price}</span>
+				<span className='ms-2 text-muted' style={{color:'black', fontSize: '16px'}}>Цена: {price} руб.</span>
 			</Card.Body>
 			<div className='mt-auto'>
 				{chek === 0 ?(

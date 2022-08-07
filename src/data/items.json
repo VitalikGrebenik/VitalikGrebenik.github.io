@@ -3,36 +3,36 @@
 	 "id": 1,
 	 "name": "Nike Blazer Mid Suede ",
 	 "price": 12999,
-	 "image": "/public/assets/sneakers/image1.jpg"
+	 "image": "/img/image1.jpg"
 	},
 	{
 	 "id": 2,
 	 "name": "Nike Air Max 270",
 	 "price": 11100,
-	 "image": "/public/assets/sneakers/image2.jpg"
+	 "image": "/img/image2.jpg"
 	},
 	{
 	 "id": 3,
 	 "name": "Aka Boku Future Rider",
 	 "price": 8499,
-	 "image": "/public/assets/sneakers/image3.jpg"
+	 "image": "/img/image3.jpg"
 	},
 	{
 	 "id": 4,
 	 "name": "Under Armour Curry 8",
 	 "price": 16499,
-	 "image": "/public/assets/sneakers/image4.jpg"
+	 "image": "/img/image4.jpg"
 	},
 	{
 	 "id": 5,
 	 "name": "Nike Kyrie 7",
 	 "price": 13499,
-	 "image": "/public/assets/sneakers/image5.jpg"
+	 "image": "/img/image5.jpg"
 	},
 	{
 		"id": 6,
 		"name": "Nike Kyrie 7",
 		"price": 13499,
-		"image": "/public/assets/sneakers/image6.jpg"
+		"image": "/img/image6.jpg"
 	}
 ]

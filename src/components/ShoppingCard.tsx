@@ -12,26 +12,30 @@ const ShoppingCard = ({isOpen}:ShoppingCardProps) => {
 	const {closeCard, cardItems} = useShoppingCard()
 
   return (
-	<Offcanvas show={isOpen} placement='end' onHide={closeCard}>
-		<Offcanvas.Header closeButton>
-			<Offcanvas.Title className='card__text'>
-				Shop
-			</Offcanvas.Title>
-		</Offcanvas.Header>
-		<Offcanvas.Body>
-			<Stack gap={3}>
-				{cardItems.map(item=>(
-					<CardItems key={item.id} {...item}/>
-				))}
-			</Stack>
-			<div className='ms-auto fw-bold fs-5 card__text'>
-					Cумма ${cardItems.reduce((total, cardItem)=>{
-						const item = StoreItems.find(i=> i.id === cardItem.id)
-						return total + (item?.price || 0)*cardItem.quantity
-					},0)}
+	<Offcanvas show={isOpen} placement='end' responsive="lg" onHide={closeCard}>
+		
+			<Offcanvas.Header closeButton>
+				<Offcanvas.Title className='card__text'>
+					Shop
+				</Offcanvas.Title>
+			</Offcanvas.Header>
+			<Offcanvas.Body>
+				<Stack gap={3}>
+					{cardItems.map(item=>(
+						<CardItems key={item.id} {...item}/>
+					))}
+				</Stack>
+
+			</Offcanvas.Body>
+			<Offcanvas.Header>
+			<div className='card__text mb-4'>
+						Oбщая цена заказа : {cardItems.reduce((total, cardItem)=>{
+							const item = StoreItems.find(i=> i.id === cardItem.id)
+							return total + (item?.price || 0)*cardItem.quantity
+						},0)}
 			</div>
-			
-		</Offcanvas.Body>
+			</Offcanvas.Header>
+		
 	</Offcanvas>
   )
 }
